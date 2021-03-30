@@ -6,7 +6,7 @@ const MongoClient = require('mongodb').MongoClient;
 require('dotenv').config()
 // console.log(process.env.DB_PASS)
 
-const uri = `mongodb+srv://burj:burj12345@cluster0.qinpn.mongodb.net/burjAlArab?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.qinpn.mongodb.net/burjAlArab?retryWrites=true&w=majority`;
 
 const port = 3001
 const app = express()
