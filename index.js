@@ -19,7 +19,7 @@ const serviceAccount = require("./configs/burj-al-arad-firebase-adminsdk-41hhv-2
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: process.env.FIRE_DB
+    databaseURL: 'https://burj-al-arad.firebaseio.com'
 });
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
